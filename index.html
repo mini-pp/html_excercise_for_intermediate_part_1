@@ -1,32 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>HTMLでのテーブル作成</title>
+  <title>FormLesson</title>
 </head>
 <body>
-  <h1>テーブルレッスン(猫)</h1>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>種類</th>
-        <th>画像(クリック可)</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td>スコティッシュフォールド</td>
-          <td><a href="https://www.pakutaso.com/shared/img/thumb/HIRAIIGIRE8s4s5_TP_V.jpg"><img width="200px" src="https://www.pakutaso.com/shared/img/thumb/HIRAIIGIRE8s4s5_TP_V.jpg"></a></td>
-        </tr>
-        <tr>
-          <td>猫2(種類不明)</td>
-          <td><a href="https://www.pakutaso.com/shared/img/thumb/tomcatDSC05027_TP_V1.jpg"><img width="200px" src="https://www.pakutaso.com/shared/img/thumb/tomcatDSC05027_TP_V1.jpg"></a></td>
-        </tr>
-        <tr>
-          <td>猫3(種類不明)</td>
-          <td><a href="https://www.pakutaso.com/shared/img/thumb/nuko-9_TP_V.jpg"><img width="200px" src="https://www.pakutaso.com/shared/img/thumb/nuko-9_TP_V.jpg"></a></td>
-        </tr>
-    </tbody>
-  </table>
+<form action="">
+  <h1>フォームレッスン</h1>
+  <p>以下のフォームを埋めてください。（※は必須項目）</p>
+
+  <div>
+      <label for="username">※ユーザー名:</label>
+      <input type="text" id="username" required>
+  </div>
+
+  <div>
+    <label for="password">※パスワード（6文字以上）:</label>
+    <input type="password" id="password" required minlength="6">
+  </div>
+
+  <div>
+    <label for="gender">※性別:</label>
+    <input type="radio" name="gender" id="woman" required>
+    <label for="woman">女性</label>
+    <input type="radio" name="gender" id="man" required>
+    <label for="man">男性</label>
+  </div>
+
+  <div>
+    <label>※生年月日:</label>
+    <label for="year">年:</label>
+    <select name="year" id="year" required>
+      <option value="">---</option>
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+    </select>
+
+    <label for="month">月:</label>
+    <select name="month" id="month" required>
+      <option value="">---</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="12">12</option>
+    </select>
+
+    <label for="days">日:</label>
+    <select name="days" id="days" required>
+      <option value="">---</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="31">31</option>
+    </select>
+  </div>
+
+    <label for="textbox">備考欄:</label>
+  <div>
+    <textarea id="textbox" cols="30" rows="10">
+    </textarea>
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
 </body>
 </html>
